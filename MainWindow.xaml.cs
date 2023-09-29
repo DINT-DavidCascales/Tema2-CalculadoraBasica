@@ -28,7 +28,7 @@ namespace Tema2_CalculadoraBasica
 
         private void BotonCalcular_Click(object sender, RoutedEventArgs e)
         {
-            q
+            
         }
 
         private void Operador_TextChanged(object sender, TextChangedEventArgs e)
