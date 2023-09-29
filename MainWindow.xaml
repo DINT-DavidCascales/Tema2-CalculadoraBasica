@@ -1,0 +1,33 @@
+﻿<Window x:Class="Tema2_CalculadoraBasica.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tema2_CalculadoraBasica"
+        mc:Ignorable="d"
+        Title="Tema2-CalculadoraBasica" Height="200" Width="500">
+    <Grid>
+
+        <TextBlock HorizontalAlignment="Left" Margin="50,42,0,0" TextWrapping="Wrap" Text="Operador1" VerticalAlignment="Top" Height="17" Width="64"/>
+
+        <TextBox x:Name="op1" HorizontalAlignment="Left" Margin="130,41,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+
+
+        <TextBlock HorizontalAlignment="Left" Margin="50,75,0,0" TextWrapping="Wrap" Text="Operador2" VerticalAlignment="Top" Height="17" Width="64"/>
+
+        <TextBox x:Name="op2" HorizontalAlignment="Left" Margin="130,74,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+
+
+        <TextBlock HorizontalAlignment="Left" Margin="50,142,0,0" TextWrapping="Wrap" Text="Resultado" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="resultado" HorizontalAlignment="Left" Margin="130,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+
+        <Button x:Name="BotonCalcular" Content="Calcular"  HorizontalAlignment="Left" Margin="346,39,0,0" VerticalAlignment="Top" IsEnabled="false" Click="BotonCalcular_Click"  />
+        <Button x:Name="Limpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="346,92,0,0" VerticalAlignment="Top" Click="Limpiar_Click"/>
+        
+        <TextBlock HorizontalAlignment="Left" Margin="50,110,0,0" TextWrapping="Wrap" Text="Operador" VerticalAlignment="Top" Height="17" Width="64"/>
+        <TextBox x:Name="Operador" HorizontalAlignment="Left" Margin="130,109,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" TextChanged="Operador_TextChanged" />
+
+    </Grid>
+</Window>
