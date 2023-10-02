@@ -29,23 +29,54 @@ namespace Tema2_CalculadoraBasica
         private void BotonCalcular_Click(object sender, RoutedEventArgs e)
         {
             
-        }
-
-        private void Operador_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (Operador.Text == "/" || Operador.Text == "+" || Operador.Text == "-" || Operador.Text == "*")
+            try
             {
-                BotonCalcular.IsEnabled = true;
-            }else
-            { BotonCalcular.IsEnabled = false;}
+                int operador1 = Int32.Parse(op1.Text);
+                int operador2 = Int32.Parse(op2.Text);
+
+                switch (Operador.Text)
+                {
+                    case "/":
+                        resultado.Text = $"{operador1 / operador2}";
+                        break;
+
+                    case "+":
+                        resultado.Text = $"{operador1 + operador2}";
+                        break;
+
+                    case "-":
+                        resultado.Text = $"{operador1 - operador2}";
+                        break;
+
+                    case "*":
+                        resultado.Text = $"{operador1 * operador2}";
+                        break;
+                }
+
+            }
+            catch (Exception )
+            {
+                MessageBox.Show("Has introducido un caracter incorrecto", "Error");
+            }
+
         }
 
-        private void Limpiar_Click(object sender, RoutedEventArgs e)
-        {
-            op1.Text = "";
-            op2.Text = "";
-            Operador.Text = "";
-            resultado.Text = "";
+            private void Operador_TextChanged(object sender, TextChangedEventArgs e)
+            {
+                if (Operador.Text == "/" || Operador.Text == "+" || Operador.Text == "-" || Operador.Text == "*")
+                {
+                    BotonCalcular.IsEnabled = true;
+                }
+                else
+                { BotonCalcular.IsEnabled = false; }
+            }
+
+            private void Limpiar_Click(object sender, RoutedEventArgs e)
+            {
+                op1.Text = "";
+                op2.Text = "";
+                Operador.Text = "";
+                resultado.Text = "";
+            }
         }
     }
-}
